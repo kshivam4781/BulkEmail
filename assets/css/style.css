@@ -1,0 +1,283 @@
+:root {
+    /* Primary Colors */
+    --primary-blue: #4e73df;
+    --primary-blue-dark: #224abe;
+    --primary-green: #1cc88a;
+    --primary-green-dark: #13855c;
+    --primary-cyan: #36b9cc;
+    --primary-cyan-dark: #258391;
+    --primary-yellow: #f6c23e;
+    --primary-yellow-dark: #dda20a;
+
+    /* Neutral Colors */
+    --neutral-100: #f8f9fc;
+    --neutral-200: #eaecf4;
+    --neutral-300: #d1d3e2;
+    --neutral-400: #858796;
+    --neutral-500: #6e707e;
+    --neutral-600: #5a5c69;
+    --neutral-700: #3a3b45;
+    --neutral-800: #2c3e50;
+
+    /* Status Colors */
+    --success: #1cc88a;
+    --info: #36b9cc;
+    --warning: #f6c23e;
+    --danger: #e74a3b;
+    --light: #f8f9fc;
+    --dark: #5a5c69;
+}
+
+/* Global Styles */
+body {
+    background-color: var(--neutral-100);
+    color: var(--neutral-600);
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Button Styles */
+.btn {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-dark));
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(45deg, var(--primary-blue-dark), var(--primary-blue));
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(45deg, var(--primary-green), var(--primary-green-dark));
+    border: none;
+}
+
+.btn-info {
+    background: linear-gradient(45deg, var(--primary-cyan), var(--primary-cyan-dark));
+    border: none;
+}
+
+.btn-warning {
+    background: linear-gradient(45deg, var(--primary-yellow), var(--primary-yellow-dark));
+    border: none;
+}
+
+/* Form Controls */
+.form-control, .form-select {
+    border-radius: 5px;
+    border: 1px solid var(--neutral-300);
+    padding: 0.5rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Table Styles */
+.table {
+    color: var(--neutral-600);
+}
+
+.table thead th {
+    background-color: var(--neutral-100);
+    border-bottom: 2px solid var(--neutral-200);
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    padding: 1rem;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.table tbody tr:hover {
+    background-color: var(--neutral-100);
+}
+
+/* Alert Styles */
+.alert {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+/* KPI Card Styles */
+.kpi-card {
+    transition: transform 0.2s;
+    border: none;
+    border-radius: 10px;
+}
+
+.kpi-card:hover {
+    transform: translateY(-5px);
+}
+
+.kpi-card .card-body {
+    padding: 1.5rem;
+}
+
+.kpi-card .card-subtitle {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--neutral-400);
+}
+
+.kpi-card .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--neutral-800);
+    margin-top: 0.5rem;
+}
+
+/* KPI Card Colors */
+.kpi-card:nth-child(1) { background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-dark)); }
+.kpi-card:nth-child(2) { background: linear-gradient(45deg, var(--primary-green), var(--primary-green-dark)); }
+.kpi-card:nth-child(3) { background: linear-gradient(45deg, var(--primary-cyan), var(--primary-cyan-dark)); }
+.kpi-card:nth-child(4) { background: linear-gradient(45deg, var(--primary-yellow), var(--primary-yellow-dark)); }
+
+.kpi-card:nth-child(1) .card-subtitle,
+.kpi-card:nth-child(1) .card-title,
+.kpi-card:nth-child(2) .card-subtitle,
+.kpi-card:nth-child(2) .card-title,
+.kpi-card:nth-child(3) .card-subtitle,
+.kpi-card:nth-child(3) .card-title,
+.kpi-card:nth-child(4) .card-subtitle,
+.kpi-card:nth-child(4) .card-title {
+    color: white;
+}
+
+/* Action Buttons */
+.btn-action {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.btn-action i {
+    font-size: 0.875rem;
+}
+
+/* Page Headers */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.page-header h4 {
+    color: var(--neutral-600);
+    font-weight: 700;
+}
+
+.page-header p {
+    color: var(--neutral-400);
+}
+
+/* Navigation */
+.navbar {
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-dark));
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--neutral-800);
+    color: var(--neutral-100);
+}
+
+.sidebar .nav-link {
+    color: var(--neutral-300);
+    transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar .nav-link.active {
+    color: white;
+    background: var(--primary-blue);
+}
+
+/* Modal Styles */
+.modal-content {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.modal-header {
+    background: var(--neutral-100);
+    border-bottom: 1px solid var(--neutral-200);
+}
+
+.modal-footer {
+    background: var(--neutral-100);
+    border-top: 1px solid var(--neutral-200);
+}
+
+/* Badge Styles */
+.badge {
+    padding: 0.5em 0.75em;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+/* Progress Bar */
+.progress {
+    height: 0.5rem;
+    border-radius: 5px;
+    background-color: var(--neutral-200);
+}
+
+.progress-bar {
+    background: linear-gradient(45deg, var(--primary-blue), var(--primary-blue-dark));
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--neutral-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--neutral-400);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--neutral-500);
+} 
